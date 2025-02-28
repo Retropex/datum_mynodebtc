@@ -1,6 +1,6 @@
 {
   "bitcoind": {
-    "rpcuser": "auto-config",
+    "rpcuser": "mynode",
     "rpcpassword": "auto-config",
     "rpcurl": "auto-config",
     "work_update_seconds": 40

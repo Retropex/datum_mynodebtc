@@ -7,6 +7,8 @@ set -x
 set -e
 
 echo "==================== INSTALLING APP ===================="
+# export bitcoin password
+BTCPSW=$(sudo cat /mnt/hdd/mynode/settings/.btcrpcpw)
 
 # update repo and install libs
 sudo apt update
