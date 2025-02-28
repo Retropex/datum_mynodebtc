@@ -19,7 +19,7 @@ cmake . && make
 # install datum
 sudo mkdir -p /opt/mynode/datum/
 sudo mv datum_gateway /opt/mynode/datum/
-sudo touch /opt/mynode/datum/datum.json
+sudo touch /opt/mynode/datum/datum_config.json
 
 # give right permission
 sudo chown -R datum:datum /opt/mynode/datum/
