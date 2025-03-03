@@ -15,8 +15,8 @@ ExecStart=/opt/mynode/datum/datum_gateway -c /opt/mynode/datum/datum_config.json
 ExecStartPost=/bin/bash -c 'if [ -f /usr/bin/service_scripts/post_datum.sh ]; then /bin/bash /usr/bin/service_scripts/post_datum.sh; fi'
 #ExecStop=FILL_IN_EXECSTOP_AND_UNCOMMENT_IF_NEEDED
 
-User=datum
-Group=datum
+User=bitcoin
+Group=bitcoin
 Type=simple
 TimeoutSec=120
 Restart=always

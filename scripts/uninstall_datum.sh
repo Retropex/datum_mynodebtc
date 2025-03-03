@@ -5,6 +5,7 @@ source /usr/share/mynode/mynode_app_versions.sh
 
 echo "==================== UNINSTALLING APP ===================="
 
-sudo rm -rf /opt/mynode/datum/
+rm -rf /opt/mynode/datum/
+rm -rf /mnt/hdd/mynode/datum/
 
 echo "================== DONE UNINSTALLING APP ================="
