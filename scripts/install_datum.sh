@@ -11,10 +11,6 @@ echo \"==================== INSTALLING APP ====================\"
 # export bitcoin password
 BTCPSW=$(cat /mnt/hdd/mynode/settings/.btcrpcpw)
 
-# update repo and install libs
-sudo apt update
-sudo apt install cmake pkgconf libcurl4-openssl-dev libjansson-dev libmicrohttpd-dev libsodium-dev psmisc -y
-
 # verify datum
 #if [ "$(uname -m)" = "arm64" ]; then
 #  echo "36635ce616117f5e0290270dfb201f7d6c5d755db4145a78b44962a32bc97077  datum_gateway" | sha256sum -c -
