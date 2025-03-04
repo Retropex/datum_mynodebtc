@@ -39,7 +39,7 @@
     "app_tile_name": "Datum",
     "app_tile_running_status_text": "Running",
     "app_tile_button_text": "Info",
-    "app_tile_button_href": "/",
+    "app_tile_button_href": "/app/datum/info",
     "app_page_show_open_button": true,
     "app_page_content": [
         {
