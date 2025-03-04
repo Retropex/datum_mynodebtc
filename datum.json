@@ -1,8 +1,8 @@
 {
-    "name": "Datum",
+    "name": "DATUM",
     "short_name": "datum",
     "author": {
-        "name": "Ocean",
+        "name": "OCEAN",
         "link": "https://ocean.xyz"
     },
     "website": {
@@ -16,8 +16,8 @@
     ],
     "latest_version": "v0.2.2",
     "supported_archs": ["aarch64","x86_64"],
-    "download_skip": false,
-    "download_type": "binary",
+    "download_skip": true,
+    "download_type": "source",
     "download_source_url": "https://github.com/OCEAN-xyz/datum_gateway/archive/refs/tags/v0.2.2beta.tar.gz",
     "download_binary_url": {
         "aarch64": "https://github.com/Retropex/datum_gateway/releases/download/v0.2.2beta/datum-0.2.2-linux-aarch64.tar.gz",

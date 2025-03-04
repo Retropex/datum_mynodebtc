@@ -25,5 +25,7 @@ StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=datum
 
+LimitNOFILE=4096
+
 [Install]
 WantedBy=multi-user.target

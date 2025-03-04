@@ -11,14 +11,15 @@ echo \"==================== INSTALLING APP ====================\"
 # export bitcoin password
 BTCPSW=$(cat /mnt/hdd/mynode/settings/.btcrpcpw)
 
+# git clone datum repo
+git clone https://github.com/OCEAN-xyz/datum_gateway.git .
+
 # verify datum
-#if [ "$(uname -m)" = "arm64" ]; then
-#  echo "36635ce616117f5e0290270dfb201f7d6c5d755db4145a78b44962a32bc97077  datum_gateway" | sha256sum -c -
-#fi
-#
-#if [ "$(uname -m)" = "x86_64" ]; then
-#  echo "7bb738a2b30eb1939cfd74d0ff937e09e1f466bad223327deb1647c57803ba98  datum_gateway" | sha256sum -c -
-#fi
+curl -L "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x1a3e761f19d2cc7785c5502ea291a2c45d0c504a" | gpg --import
+git verify-tag v0.2.2beta
+
+# build datum
+cmake . && make
 
 # install datum
 touch /opt/mynode/datum/datum_config.json
@@ -66,10 +67,6 @@ echo "{
 " >> /opt/mynode/datum/datum_config.json
 
 jq --arg BTCPSW "$BTCPSW" '.bitcoind.rpcpassword = $BTCPSW' /opt/mynode/datum/datum_config.json > /opt/mynode/datum/datum_config.json.tmp && mv /opt/mynode/datum/datum_config.json.tmp /opt/mynode/datum/datum_config.json
-
-
-# give right permission
-chown -R bitcoin:bitcoin /opt/mynode/datum/
 
 
 echo \"================== DONE INSTALLING APP =================\"
