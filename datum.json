@@ -14,14 +14,14 @@
     "description": [
         "DATUM (Decentralized Alternative Templates for Universal Mining) is a brand new bitcoin mining protocol that allows you to create your own block templates using your own Bitcoin node."
     ],
-    "latest_version": "v0.2.2",
+    "latest_version": "v0.3.0",
     "supported_archs": ["aarch64","x86_64"],
     "download_skip": true,
     "download_type": "source",
-    "download_source_url": "https://github.com/OCEAN-xyz/datum_gateway/archive/refs/tags/v0.2.2beta.tar.gz",
+    "download_source_url": "https://github.com/OCEAN-xyz/datum_gateway/archive/refs/tags/{VERSION}beta.tar.gz",
     "download_binary_url": {
-        "aarch64": "https://github.com/Retropex/datum_gateway/releases/download/v0.2.2beta/datum-0.2.2-linux-aarch64.tar.gz",
-        "x86_64": "https://github.com/Retropex/datum_gateway/releases/download/v0.2.2beta/datum-0.2.2-linux-x86_64.tar.gz"
+        "aarch64": "",
+        "x86_64": ""
     },
     "install_env_vars": {},
     "supports_app_page": true,
@@ -50,12 +50,13 @@
                 "User: <Your Bitcoin address>",
                 "Password: x",
                 "",
-                "If you want to solo mine, please edit datum conf at /opt/mynode/datum/datum_config.json"
+                "If you want to solo mine, please edit datum conf at /opt/mynode/datum/datum_config.json",
+                "It's recommended to add this to your bitcoin.conf to avoid mining stale work: \"blocknotify=curl -s -m 5 http://127.0.0.1:21000/NOTIFY\""
             ]
         }
     ],
     "can_uninstall": true,
-    "can_reinstall": false,
+    "can_reinstall": true,
     "can_enable_disable": true,
     "is_beta": false,
     "is_premium": false,
