@@ -45,12 +45,13 @@
         {
             "heading": "Instructions",
             "content": [
+                "⚠️ Dont forget to add your Bitcoin address in the GUI otherwise DATUM won't start, the password is \"bolt\"",
                 "If you want to mine with OEAN then enter these informations into your miners:",
                 "Stratum URL: <Your node IP>:23334",
                 "User: <Your Bitcoin address>",
                 "Password: x",
                 "",
-                "If you want to solo mine, please edit datum conf at /opt/mynode/datum/datum_config.json",
+                "If you want to solo mine, please edit datum conf at /mnt/hdd/mynode/datum/datum_config.json",
                 "It's recommended to add this to your bitcoin.conf to avoid mining stale work: \"blocknotify=curl -s -m 5 http://127.0.0.1:21000/NOTIFY\""
             ]
         }
