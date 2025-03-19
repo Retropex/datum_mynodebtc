@@ -16,10 +16,10 @@ git clone https://github.com/OCEAN-xyz/datum_gateway.git .
 
 # verify datum
 curl -L "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x1a3e761f19d2cc7785c5502ea291a2c45d0c504a" | gpg --import
-git verify-tag v0.3.0beta
+git verify-tag v0.3.1beta
 
 # checkout the tag
-git checkout v0.3.0beta
+git checkout v0.3.1beta
 
 # build datum
 cmake . && make
